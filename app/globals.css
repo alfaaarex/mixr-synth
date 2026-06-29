@@ -27,12 +27,48 @@
 }
 
 html, body {
-  background: var(--black);
+  background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, var(--black) 100%);
   color: var(--white);
   font-family: 'Space Grotesk', sans-serif;
   overflow-x: hidden;
   height: 100%;
   user-select: none;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(17, 17, 17, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Tabs */
+.tab-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: var(--steel);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+  color: var(--white);
+}
+
+.tab-btn.active {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+  text-shadow: 0 0 10px rgba(255,107,43,0.5);
 }
 
 /* Knob styles */

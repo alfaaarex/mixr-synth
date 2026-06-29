@@ -10,6 +10,11 @@ export interface SynthPatch {
   osc2Vol: number
   osc2Detune: number
   osc2Semi: number
+  // Noise
+  noiseVol: number
+  noiseType: 'white' | 'pink'
+  // Glide
+  glideTime: number
   // Filter
   filterType: FilterType
   filterCutoff: number
@@ -43,6 +48,9 @@ export const defaultPatch: SynthPatch = {
   osc2Vol: 0.4,
   osc2Detune: 0.5,
   osc2Semi: 0.5,
+  noiseVol: 0.0,
+  noiseType: 'white',
+  glideTime: 0.01,
   filterType: 'lowpass',
   filterCutoff: 0.6,
   filterRes: 0.2,
